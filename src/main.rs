@@ -8,8 +8,8 @@
 // If a type you want to use isn’t in the prelude,
 // you have to bring that type into scope explicitly with a use statement.
 
-use std::io;
 use rand::Rng;
+use std::io;
 
 fn main() {
     println!("Guess the number!");
