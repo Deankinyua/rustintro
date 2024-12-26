@@ -1,12 +1,21 @@
-pub fn hello() {
-    let number1: i64 = -445;
+pub fn variables() {
 
-    let y1: f64 = 3.09979797577483393930006099;
-    let y2: f32 = 3.09979797577483393930006099;
-    let truncated  = -5 / 3;
+        // addition
+        let sum = 5 + 10;
 
-    println!("the number is a signed integer of size 32 - {number1}");
-    println!("32 bit float has less precision - {y2}");
-    println!("than 64 bit float {y1}");
-    println!("Quotient is : {truncated}");
+        // subtraction
+        let difference = 95.5 - 4.3;
+    
+        // multiplication
+        let product = 4 * 30;
+    
+        // division
+        let quotient = 56.7 / 32.2;
+        let truncated = -5 / 3; // Results in -1
+    
+        // remainder
+        let remainder = 43 % 5;
+
+        println!("the sum is {sum} ");
+
 }
