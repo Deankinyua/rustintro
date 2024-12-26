@@ -9,6 +9,7 @@
 // you have to bring that type into scope explicitly with a use statement.
 
 // use rand::Rng;
+use std::cmp::Ordering;
 use std::io;
 
 use rand::{thread_rng, Rng};
@@ -33,28 +34,48 @@ fn main() {
 
     println!("The secret number is: {secret_number}");
 
-    println!("Please input your guess.");
-    // * by default values in Rust are immutable but
-    // * we can use the mut keyword to override this default behaviour
-    // * As you can see Rust is statically and Strongly typed
+    loop {
+        println!("Please input your guess.");
+        // * by default values in Rust are immutable but
+        // * we can use the mut keyword to override this default behaviour
+        // * As you can see Rust is statically and Strongly typed
 
-    let mut guess = String::new();
+        //* Determining the type by inference
+        let mut guess = String::new();
 
-    // the Rust analyzer adds the type declaration on the left side
+        // the Rust analyzer adds the type declaration on the left side
 
-    // it seems that instead of using the dot syntax to call functions rust relies on the :: syntax
+        // it seems that instead of using the dot syntax to call functions rust relies on the :: syntax
 
-    io::stdin()
-        // The & indicates that this argument is a reference
-        .read_line(&mut guess)
-        .expect("Failed to read line");
+        io::stdin()
+            // The & indicates that this argument is a reference
+            .read_line(&mut guess)
+            .expect("Failed to read line");
 
-    println!("You guessed: {}", guess);
+        // * Enforcing the type
+        let guess: u32 = guess.trim().parse().expect("Please type a number!");
 
-    let x = 5;
-    let y = 10;
+        println!("You guessed: {}", guess);
 
-    println!("x = {x} and y + 2 = {}", y + 2);
+        // the match expression in Rust is almost the same as the case declaration in Elixir
+
+        match guess.cmp(&secret_number) {
+            // is the guess less than the secret number ?
+            Ordering::Less => println!("Too small!"),
+            // is the guess greater than the secret number ?
+            Ordering::Greater => println!("Too big!"),
+            // is the guess equal to the secret number ?
+            Ordering::Equal => {
+                println!("You win!");
+                break;
+            }
+        }
+    }
+
+    // let x = 5;
+    // let y = 10;
+
+    // println!("x = {x} and y + 2 = {}", y + 2);
 }
 
 // importing a module in a file named foo.rs
