@@ -1,17 +1,32 @@
 // * a crate is a single compilation unit in Rust
-// * a crate can be compiled into a library or a binary
+// * a crate can be compiled into either a library or a binary
 // * The presence of the ! indicates that you are calling a macro
 
 // * Most lines of Rust end in a semicolon
-// * cargo check, cargo run and cargo build
+// * cargo check, cargo run, cargo doc --open and cargo build
 
 // If a type you want to use isn’t in the prelude,
 // you have to bring that type into scope explicitly with a use statement.
 
-use rand::Rng;
+// use rand::Rng;
 use std::io;
 
+use rand::{thread_rng, Rng};
+
 fn main() {
+    // thread_rng returns the specific number generator
+    let mut rng = thread_rng();
+
+    // Exclusive range
+    let n: u32 = rng.gen_range(2..4);
+    println!("{}", n);
+    let m: f64 = rng.gen_range(-40.0..1.3e5);
+    println!("{}", m);
+
+    // Inclusive range
+    let n: u32 = rng.gen_range(2..=4);
+    println!("{}", n);
+
     println!("Guess the number!");
 
     let secret_number = rand::thread_rng().gen_range(1..=100);
