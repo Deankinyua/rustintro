@@ -1,21 +1,20 @@
+// use rand::{thread_rng, Rng};
+
+
 pub fn variables() {
 
-        // addition
-        let sum = 5 + 10;
+        let mut x = 5;
+        println!("The value of x is: {x}");
+        x = 6;
+        println!("The value of x is: {x}");
+        // let secret_number = rand::thread_rng().gen_range(1..=100);
+        const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 4;
 
-        // subtraction
-        let difference = 95.5 - 4.3;
-    
-        // multiplication
-        let product = 4 * 30;
-    
-        // division
-        let quotient = 56.7 / 32.2;
-        let truncated = -5 / 3; // Results in -1
-    
-        // remainder
-        let remainder = 43 % 5;
-
-        println!("the sum is {sum} ");
+        // * a Constant must always be assigned to a constant expression 
+        // * this will fail 
+        // * constants are always immutable
+        // const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * secret_number;
+        
+        println!("Four hours in seconds is: {THREE_HOURS_IN_SECONDS}");
 
 }
