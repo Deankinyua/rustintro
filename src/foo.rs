@@ -33,6 +33,8 @@ pub fn variables() {
     println!(
         "Shadowing is effectively creating a new 
         variable with the same name as the 
-        previous one meaning the previous value will be discarded"
+        previous one meaning the previous value will be discarded
+        Using shadowing also means that the variable will still remain immutable 
+        after the set of operations has been completed"
     )
 }
