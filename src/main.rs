@@ -2,7 +2,7 @@
 // * a crate can be compiled into either a library or a binary
 // * The presence of the ! indicates that you are calling a macro
 
-// * Most lines of Rust end in a semicolon
+// * Most lines of Rust end in a semicolon except expressions
 // * cargo check, cargo run, cargo doc --open and cargo build
 
 // If a type you want to use isn’t in the prelude,
