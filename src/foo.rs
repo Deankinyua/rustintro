@@ -16,7 +16,7 @@ pub fn _control() {
     }
 }
 
-pub fn multi_conditions() {
+pub fn _multi_conditions() {
     let number = 6;
 
     if number % 4 == 0 {
