@@ -16,21 +16,28 @@ pub fn _control() {
     }
 }
 
-pub fn _multi_conditions() {
-    let number = 13;
+pub fn multi_conditions() {
+    let number = 6;
 
     if number % 4 == 0 {
         println!("number is divisible by 4");
-    } else if number % 3 == 0 {
+    }
+    // * Rust executes the first block for which the condition returns true
+    else if number % 3 == 0 {
         println!("number is divisible by 3");
     } else if number % 2 == 0 {
         println!("number is divisible by 2");
     } else {
         println!("number is not divisible by 4, 3, or 2");
     }
+    // * This will result in an error because the 2 values are of different types and the return type
+    // * of an if expression must be the same in this case i32
+    let _condition = true;
+    // let number = if condition { 5 } else { "six" };
+    println!("The value of number is: {number}");
 }
 
-pub fn iterator1() {
+pub fn _iterator1() {
     // Prints each argument on a separate line
     for argument in env::args() {
         println!("{}", argument);

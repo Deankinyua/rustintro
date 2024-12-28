@@ -1,0 +1,1 @@
+// * Rust has 3 kinds of loops loop, while and for

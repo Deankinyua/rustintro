@@ -4,7 +4,7 @@ mod foo;
 
 fn main() {
     // foo::control();
-    // foo::multi_conditions();
-    foo::iterator1();
+    foo::multi_conditions();
+    // foo::iterator1();
     //    let _ = buffer::main();
 }
