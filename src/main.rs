@@ -2,5 +2,5 @@
 mod foo;
 
 fn main() {
-    foo::variables();
+    foo::control();
 }
