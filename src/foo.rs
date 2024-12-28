@@ -33,9 +33,9 @@ pub fn variables() {
 
     // * Arrays in Rust must have a fixed length and the elements
     // * inside an Array must be of the same type
-    let _a = [1, 2, 3, 4, 5];
+    // * if you want a similar data structure that grows and shrinks use a vector
     // * Store data that is of a predefined length
-    let _months = [
+    let months = [
         "January",
         "February",
         "March",
@@ -49,4 +49,14 @@ pub fn variables() {
         "November",
         "December",
     ];
+
+    println!("Array elements being accessed by the index {} ", months[11]);
+
+    let a = [1, 2, 3, 4, 5];
+
+    let first = a[0];
+    let second = a[1];
+    println!(
+        "The first and the second elements in the array are {first} and {second} respectively"
+    );
 }
