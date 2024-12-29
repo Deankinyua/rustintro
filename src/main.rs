@@ -8,5 +8,6 @@ fn main() {
     // foo::multi_conditions();
     // foo::iterator1();
     // let _ = buffer::main();
-    loops::break_with_value()
+    // loops::break_with_value();
+    loops::nested_loops();
 }
