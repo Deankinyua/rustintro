@@ -1,3 +1,5 @@
+// fs stands for filesystem 
+// std::fs is an example of a module which is a collection of functions, other modules, Traits e.t.c
 use std::fs::File;
 use std::io::{self, Read};
 
