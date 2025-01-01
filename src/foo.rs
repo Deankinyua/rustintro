@@ -17,7 +17,7 @@ pub fn variables() {
 
     let tup = (500, 6.4, 1);
 
-    // * Pattern Matching used for destructuring just like in Elixir
+    // * Pattern Matching used for destructuring just like in Elixir except in this case it is a tuple
     let (x, y, z) = tup;
 
     println!("The value of x is: {x}");
