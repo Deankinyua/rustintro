@@ -1,4 +1,4 @@
-// fs stands for filesystem 
+// fs stands for filesystem
 // std::fs is an example of a module which is a collection of functions, other modules, Traits e.t.c
 use std::fs::File;
 use std::io::{self, Read};
@@ -17,7 +17,7 @@ pub fn _main() -> io::Result<()> {
     Ok(())
 }
 
-pub fn dynamicbuffer() {
+pub fn _dynamicbuffer() {
     // * Dynamic Buffer
     let mut buffer: Vec<u8> = Vec::new();
     buffer.extend_from_slice(&[1, 2, 3, 4]); // Adding some data

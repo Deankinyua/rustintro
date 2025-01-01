@@ -1,4 +1,4 @@
-// * Rust has 3 kinds of loops :- loop, while and for
+// ? Rust has 3 kinds of loops :- loop, while and for
 
 // ? understand that with loop code is executed indefinitely until you explicitly tell it to stop
 // ? with the Break expression
@@ -23,7 +23,7 @@ pub fn _break_with_value() {
 
 // * It is a good idea to name your loops if you
 // * are nesting them to allow for selective break and continue
-pub fn nested_loops() {
+pub fn _nested_loops() {
     let mut count = 0;
     // count is incrementing
     'counting_up: loop {

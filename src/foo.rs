@@ -4,7 +4,7 @@ use std::env;
 pub fn _control() {
     // Blocks of code associated with conditions are sometimes called arms
     // just like arms in match expressions
-    // It is important to note that the value of the condition in an 
+    // It is important to note that the value of the condition in an
     // if expressions MUST always be a Boolean
     let number = 3;
 
