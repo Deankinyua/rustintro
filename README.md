@@ -1,4 +1,4 @@
-#The Rust Programming Language
+# The Rust Programming Language
 
 This Project is just the course content of The Rust Programming Book
 I have been learning Rust and doing some code examples in the Book
