@@ -3,13 +3,15 @@
 // * The presence of the ! indicates that you are calling a macro
 
 // * Most lines of Rust end in a semicolon except expressions
-// * cargo check, cargo run, cargo doc --open and cargo build
+// * cargo check, cargo run, cargo build
+// * cargo doc --open -> Used to open documentation related to the current project
 
 // If a type you want to use isn’t in the prelude,
 // you have to bring that type into scope explicitly with a use statement.
 
 // use rand::Rng;
 use std::cmp::Ordering;
+// we need this for input/output
 use std::io;
 
 use rand::{thread_rng, Rng};
@@ -18,15 +20,19 @@ fn main() {
     // thread_rng returns the specific number generator
     let mut rng = thread_rng();
 
+    let a = 3;
+    let b = 1 + 2;
+    assert_eq!(a, b);
+
     // Exclusive range
     let n: u32 = rng.gen_range(2..4);
-    println!("{}", n);
+    println!("The first generated number is {}", n);
     let m: f64 = rng.gen_range(-40.0..1.3e5);
-    println!("{}", m);
+    println!("The second generated number is {}", m);
 
     // Inclusive range
     let n: u32 = rng.gen_range(2..=4);
-    println!("{}", n);
+    println!("The third generated number is {}", n);
 
     println!("Guess the number!");
 
